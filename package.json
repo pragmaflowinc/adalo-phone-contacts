@@ -1,0 +1,45 @@
+{
+  "name": "phone-contacts",
+  "description": "Adalo component to read data from your phone contacts",
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "Steven McKeown",
+  "scripts": {
+    "start": "tsc --watch & adalo dev",
+    "build": "tsc",
+    "login": "adalo login",
+    "publish": "adalo publish"
+  },
+  "adalo": {
+    "logo": "./example-logo.png",
+    "displayName": "Phone Contacts",
+    "components": [
+      {
+        "name": "ContactList",
+        "manifest": "./src/components/ContactList/manifest.json"
+      }
+    ],
+    "iosInstallScript": "./scripts/install_ios.sh",
+    "androidInstallScript": "./scripts/install_android.sh"
+  },
+  "dependencies": {
+    "@protonapp/material-components": "^0.0.40",
+    "@protonapp/proton-runner": "^0.2.30",
+    "@protonapp/react-native-material-ui": "^2.0.6",
+    "@react-native-community/toolbar-android": "^0.2.1",
+    "react-native-contacts": "^7.0.2",
+    "react-native-vector-icons": "^9.0.0"
+  },
+  "devDependencies": {
+    "@adalo/cli": "^0.0.43",
+    "@types/react": "^17.0.29",
+    "@types/react-native": "^0.65.5",
+    "@types/react-native-vector-icons": "^6.4.9",
+    "react": "^16.9.0",
+    "react-art": "^16.6.0",
+    "react-dom": "^16.9.0",
+    "react-native-web": "^0.9.5",
+    "typescript": "^4.4.4"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "displayName": "Contact List",
+  "defaultWidth": 600,
+  "defaultHeight": 232,
+  "components": "./index.js",
+  "icon": "./example-thumbnail.png",
+  "props": [
+    {
+      "name": "dividerType",
+      "displayName": "Divider",
+      "type": "text",
+      "default": "inset",
+      "control": {
+        "type": "menu",
+        "options": [
+          { "label": "None", "value": "none" },
+          { "label": "Inset", "value": "inset" },
+          { "label": "Full", "value": "full" }
+        ]
+      }
+    },
+    {
+      "name": "dividerColor",
+      "displayName": "Divider Color",
+      "type": "color",
+      "default": "#e0e0e0"
+    },
+    {
+      "name": "onPress",
+      "displayName": "Click Actions",
+      "type": "action",
+      "arguments": [
+        {
+        "type": "text",
+        "displayName": "Display Name"
+        },
+        {
+        "type": "text",
+        "displayName": "Primary Email Addresss"
+        },
+        {
+        "type": "text",
+        "displayName": "Primary Phone Number"
+        }
+      ]
+    },
+    {
+      "name": "firstLine",
+      "displayName": "Title",
+      "type": "text",
+      "default": "displayName",
+      "control": {
+        "type": "menu",
+        "options": [
+          { "label": "Display Name", "value": "displayName" },
+          { "label": "Family Name", "value": "familyName" },
+          { "label": "Given Name", "value": "givenName" }
+        ]
+      }
+    },
+    {
+      "name": "titleColor",
+      "displayName": "Title Color",
+      "type": "color",
+      "default": "#000000"
+    }
+  ],
+  "childComponents": [
+    {
+      "name": "secondLine",
+      "displayName": "Subtitle",
+      "props": [
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "text",
+          "displayName": "Text",
+          "type": "text",
+          "default": "emailAddresses",
+          "control": {
+            "type": "menu",
+            "options": [
+              { "label": "Primary Email Address", "value": "emailAddresses" },
+              { "label": "Primary Phone Number", "value": "phoneNumbers" },
+              { "label": "Primary Address", "value": "postalAddresses" }
+            ]
+          }
+
+        },
+        {
+          "name": "color",
+          "displayName": "Color",
+          "type": "color",
+          "default": "#ccc"
+        }
+      ]
+    },
+    {
+      "name": "rightSection",
+      "displayName": "Right Section",
+      "props": [
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "type",
+          "displayName": "Type",
+          "type": "text",
+          "default": "icon",
+          "control": {
+            "type": "menu",
+            "options": [{ "label": "Icon", "value": "icon" }]
+          }
+        },
+        {
+          "name": "icon",
+          "displayName": "Icon",
+          "type": "icon",
+          "default": "add",
+          "enabled": { "type": "icon" }
+        },
+        {
+          "name": "iconColor",
+          "displayName": "Icon Color",
+          "type": "color",
+          "default": "#ccc",
+          "enabled": { "type": "icon" }
+        },
+        {
+          "name": "onPress",
+          "displayName": "Click Actions",
+          "type": "action",
+          "arguments": [
+            {
+            "type": "text",
+            "displayName": "Display Name"
+            },
+            {
+            "type": "text",
+            "displayName": "Primary Email Addresss"
+            },
+            {
+            "type": "text",
+            "displayName": "Primary Phone Number"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
